@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Sandra y Nico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
@@ -23,6 +24,31 @@
             <div><span id="minutes">00</span><small>Minutos</small></div>
             <div><span id="seconds">00</span><small>Segundos</small></div>
         </div>
+        <div class="mt-8 space-y-6">
+            <!-- Ceremonia -->
+            <div class="bg-white shadow-md rounded-2xl p-6">
+              <h2 class="text-2xl font-bold">Ceremonia</h2>
+              <p class="text-lg">Iglesia de San Pedro</p>
+              <p class="text-sm text-gray-600">12:00 PM - Calle Mayor 123, Madrid</p>
+              <a href="https://www.google.com/maps?q=Iglesia+de+San+Pedro,+Calle+Mayor+123,+Madrid" 
+                 target="_blank"
+                 class="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+                Ver en Google Maps
+              </a>
+            </div>
+        
+            <!-- Fiesta -->
+            <div class="bg-white shadow-md rounded-2xl p-6">
+              <h2 class="text-2xl font-bold">Celebración</h2>
+              <p class="text-lg">Finca Las Encinas</p>
+              <p class="text-sm text-gray-600">15:00 PM - Camino de la Vega 45, Madrid</p>
+              <a href="https://www.google.com/maps?q=Finca+Las+Encinas,+Camino+de+la+Vega+45,+Madrid" 
+                 target="_blank"
+                 class="inline-block mt-3 px-4 py-2 bg-green-600 text-white rounded-xl hover:bg-green-700 transition">
+                Ver en Google Maps
+              </a>
+            </div>
+          </div>
     </section>
 
     <script src="./js/app.js"></script>
