@@ -11,6 +11,14 @@ html {
     scroll-behavior: smooth;
 }
 
+.font-title{
+    font-family: 'Playfair Display', serif;
+}
+
+.font-body{
+    font-family: 'Lora', serif;
+}
+
 .seccion1 {
     height: 100vh;
     background-image: url('fondo.jpg');

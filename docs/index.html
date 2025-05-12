@@ -7,19 +7,21 @@
     <title>Boda Sandra y Nico</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> <!--Librería QR-->
+    <!-- Fuentes elegantes para boda -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body class="overflow-hidden">
     <div class="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth touch-pan-y">
         <section class="seccion1 snap-start h-screen overflow-hidden flex items-center justify-center">
-            <h1>SANDRA & NICO</h1>
-            <h2>¡NOS CASAMOS!</h2>
-            <p>10 DE SEPTIEMBRE DE 2025</p>
+            <h1 class="font-title">SANDRA & NICO</h1>
+            <h2 class="font-title">¡NOS CASAMOS!</h2>
+            <p class="font-body">10 DE SEPTIEMBRE DE 2025</p>
         </section>
 
         <section class="seccion2 snap-start snap-always min-h-screen overflow-y-auto py-8 px-4">
-            <h2 class="text-3xl font-bold mb-6 mt-4">¡Ya queda menos!</h2>
+            <h2 class="text-3xl font-title mb-6 mt-4">¡Ya queda menos!</h2>
             <div id="countdown">
                 <div><span id="days">00</span><small>Días</small></div>
                 <div><span id="hours">00</span><small>Horas</small></div>
@@ -29,23 +31,23 @@
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 <!-- Ceremonia -->
                 <div class="bg-white shadow-md rounded-2xl p-6">
-                    <h2 class="text-2xl font-bold">Ceremonia</h2>
-                    <p class="text-lg">Iglesia de Santa María</p>
+                    <h2 class="text-2xl font-title">Ceremonia</h2>
+                    <p class="text-lg font-body">Iglesia de Santa María</p>
                     <p class="text-sm text-gray-600">12:00 PM - Plaça de Sta. Maria, 1, 03202 Elx, Alicante</p>
                     <a href="https://maps.app.goo.gl/eesa5GQjdPBb63fP9" target="_blank"
-                        class="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+                        class="fonty-body inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
                         Ver en Google Maps
                     </a>
                 </div>
 
                 <!-- Fiesta -->
                 <div class="bg-white shadow-md rounded-2xl p-6">
-                    <h2 class="text-2xl font-bold">Celebración</h2>
-                    <p class="text-lg">Restaurante Carlos</p>
+                    <h2 class="text-2xl font-title">Celebración</h2>
+                    <p class="text-lg font-body">Restaurante Carlos</p>
                     <p class="text-sm text-gray-600">15:00 PM - Carretera La Marina, Kilómetro 3, 03294 Elche, Alicante
                     </p>
                     <a href="https://maps.app.goo.gl/oqyKwLA1VTBBVhXF6" target="_blank"
-                        class="inline-block mt-3 px-4 py-2 bg-green-600 text-white rounded-xl hover:bg-green-700 transition">
+                        class="font-body inline-block mt-3 px-4 py-2 bg-green-600 text-white rounded-xl hover:bg-green-700 transition">
                         Ver en Google Maps
                     </a>
                 </div>
@@ -53,8 +55,8 @@
         </section>
         <section class="seccion3 snap-start h-screen overflow-hidden flex items-center justify-center bg-white py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-3xl font-semibold mb-6">Lista de Bodas</h2>
-                <p class="text-lg mb-6">Escanea este código QR para acceder a nuestra lista de regalos en El Corte
+                <h2 class="text-3xl font-title mb-6">Lista de Bodas</h2>
+                <p class="text-lg font-body mb-6">Escanea este código QR para acceder a nuestra lista de regalos en El Corte
                     Inglés -
                     Bodamas.</p>
 
@@ -62,7 +64,7 @@
                     <div id="qrcode"></div>
                 </div>
 
-                <p class="mt-6 text-blue-600 underline">
+                <p class="font-body mt-6 text-blue-600 underline">
                     <a href="https://www.bodamas.com" target="_blank">O haz clic aquí para abrirla directamente</a>
                 </p>
             </div>
@@ -70,12 +72,12 @@
 
         <section class="seccion4 snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-3xl font-semibold mb-6">Comparte tus fotos con nosotros</h2>
-                <p class="text-lg mb-8">Haz clic en el botón para subir las fotos de la boda. ¡Nos encantará verlas!</p>
+                <h2 class="text-3xl font-title mb-6">Comparte tus fotos con nosotros</h2>
+                <p class="font-body text-lg mb-8">Haz clic en el botón para subir las fotos de la boda. ¡Nos encantará verlas!</p>
 
                 <a href="https://docs.google.com/forms/d/1DsPrmGRMTvQHrFi8iOFjVJY791PNfFvjWa647sc64jA/viewform"
                     target="_blank"
-                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition">
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition">
                     Subir fotos
                 </a>
             </div>
