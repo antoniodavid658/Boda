@@ -45,12 +45,37 @@ html {
     color: #333;
     text-align: center;
     padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.seccion2 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+.seccion3 {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+.seccion4 {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 
 #countdown {
     display: flex;
