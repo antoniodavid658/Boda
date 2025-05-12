@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.seccion1 {
+    height: 100vh;
+    background-image: url('fondo.jpg');
+    /* Reemplazar con imagen */
+    background-size: cover;
+    background-position: center;
+    color: rgb(10, 10, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.seccion1 h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.seccion1 h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.seccion1 p {
+    font-size: 1.5rem;
+}
+
+.seccion2 {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.seccion2 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 2rem;
+}
+
+#countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#countdown span {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#countdown small {
+    font-size: 1rem;
+    color: #666;
+}
