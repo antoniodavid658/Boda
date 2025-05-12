@@ -1,3 +1,4 @@
+//Bloque Contador
 function updateCountdown() {
     const weddingDate = new Date("2025-09-10T00:00:00");
     const now = new Date();
@@ -20,4 +21,18 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
-updateCountdown()
+updateCountdown();
+//Bloque Contador
+
+
+//Bloque QR
+const qrUrl = "https://www.bodamas.com"; // Reemplaza con el enlace real a tu lista
+new QRCode(document.getElementById("qrcode"), {
+    text: qrUrl,
+    width: 200,
+    height: 200,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+});
+//Bloque QR
