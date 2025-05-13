@@ -36,3 +36,25 @@ new QRCode(document.getElementById("qrcode"), {
     correctLevel: QRCode.CorrectLevel.H
 });
 //Bloque QR
+
+//Bloque de animaciones
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const animation = el.dataset.animate || 'animate__fadeInUp'; // Valor por defecto
+            const delay = el.dataset.delay || 0;
+
+            setTimeout(() => {
+                el.classList.remove('opacity-0');
+                el.classList.add('animate__animated', animation);
+            }, delay);
+
+            observer.unobserve(el); // Solo una vez
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+});
