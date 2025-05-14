@@ -64,6 +64,8 @@ const welcomeScreen = document.getElementById('welcome-screen');
 const enterButton = document.getElementById('enter-button');
 const audio = document.getElementById('background-music');
 const toggleBtn = document.getElementById('toggle-music');
+const pauseIcon = document.getElementById('pause-icon');
+const playIcon = document.getElementById('play-icon');
 
 enterButton.addEventListener('click', () => {
     welcomeScreen.style.display = 'none';
@@ -80,9 +82,11 @@ enterButton.addEventListener('click', () => {
 toggleBtn.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        toggleBtn.textContent = '⏸️';
+        pauseIcon.classList.remove('hidden');
+        playIcon.classList.add('hidden');
     } else {
         audio.pause();
-        toggleBtn.textContent = '▶️';
+        pauseIcon.classList.add('hidden');
+        playIcon.classList.remove('hidden');
     }
 });
