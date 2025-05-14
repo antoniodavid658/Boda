@@ -8,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> <!--Librería QR-->
     <!-- Fuentes elegantes para boda -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&family=Great+Vibes&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&family=Great+Vibes&display=swap"
+        rel="stylesheet">
     <!--Animaciones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -23,8 +25,9 @@
             <p class="font-body opacity-0 animate-on-scroll">10 DE SEPTIEMBRE DE 2025</p>
         </section>
 
-        <section class="seccion2 snap-start snap-always min-h-screen overflow-y-auto py-8 px-4">
-            <h2 class="text-3xl font-title mb-6 mt-4 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">¡YA QUEDA MENOS!</h2>
+        <section class="seccion-general snap-start snap-always min-h-screen overflow-y-auto py-8 px-4">
+            <h2 class="text-3xl font-title mb-6 mt-4 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">¡YA
+                QUEDA MENOS!</h2>
             <div id="countdown" class="opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
                 <div><span id="days">00</span><small>Días</small></div>
                 <div><span id="hours">00</span><small>Horas</small></div>
@@ -33,8 +36,9 @@
             </div>
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 <!-- Ceremonia -->
-                <div class="bg-white shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft" data-delay="0"">
-                    <h2 class="text-2xl font-title">CEREMONIA</h2>
+                <div class="bg-white shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
+                    data-animate="animate__fadeInLeft" data-delay="0"">
+                    <h2 class=" text-2xl font-title">CEREMONIA</h2>
                     <p class="text-lg font-body">Iglesia de Santa María</p>
                     <p class="text-sm text-gray-600">12:00 PM - Plaça de Sta. Maria, 1, 03202 Elx, Alicante</p>
                     <a href="https://maps.app.goo.gl/eesa5GQjdPBb63fP9" target="_blank"
@@ -44,7 +48,8 @@
                 </div>
 
                 <!-- Fiesta -->
-                <div class="bg-white shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInRight" data-delay="200">
+                <div class="bg-white shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
+                    data-animate="animate__fadeInRight" data-delay="200">
                     <h2 class="text-2xl font-title">CELEBRACIÓN</h2>
                     <p class="text-lg font-body">Restaurante Carlos</p>
                     <p class="text-sm text-gray-600">15:00 PM - Carretera La Marina, Kilómetro 3, 03294 Elche, Alicante
@@ -56,7 +61,7 @@
                 </div>
             </div>
         </section>
-        <section
+        <!-- <section
             class="seccion3 snap-start h-screen overflow-hidden flex items-center justify-center bg-white py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
                 <h2 class="text-3xl font-title mb-6">LISTA DE BODAS</h2>
@@ -73,15 +78,19 @@
                     <a href="https://www.bodamas.com" target="_blank">O haz clic aquí para abrirla directamente</a>
                 </p>
             </div>
-        </section>
+        </section> -->
 
         <section
-            class="seccion4 snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
+            class="seccion-general snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
                 <h2 class="text-3xl font-title mb-6">COMPARTE TUS FOTOS CON NOSOTROS</h2>
-                <p class="font-body text-lg mb-8">Haz clic en el botón para subir las fotos de la boda.<br> ¡Nos
+                <p class="font-body text-lg mb-8">Escanea el QR o haz clic en el botón para subir las fotos de la boda.<br> ¡Nos
                     encantará
                     verlas!</p>
+
+                <div class="flex justify-center mb-6">
+                    <div id="qrcode"></div>
+                </div>
 
                 <a href="https://docs.google.com/forms/d/1DsPrmGRMTvQHrFi8iOFjVJY791PNfFvjWa647sc64jA/viewform"
                     target="_blank"
@@ -92,7 +101,7 @@
         </section>
 
         <section
-            class="seccion4 snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
+            class="seccion-general snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
                 <h2 class="text-3xl font-title mb-6">CONFIRMACIÓN DE ASISTENCIA</h2>
                 <p class="font-body text-lg mb-8">Esperamos que seas parte de esta gran celebración.<br> ¡Confírmanos tu

@@ -26,7 +26,7 @@ updateCountdown();
 
 
 //Bloque QR
-const qrUrl = "https://www.bodamas.com"; // Reemplaza con el enlace real a tu lista
+const qrUrl = "https://docs.google.com/forms/d/1DsPrmGRMTvQHrFi8iOFjVJY791PNfFvjWa647sc64jA/viewform";
 new QRCode(document.getElementById("qrcode"), {
     text: qrUrl,
     width: 200,

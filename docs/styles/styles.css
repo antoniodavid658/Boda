@@ -48,31 +48,7 @@ html {
     font-size: 1.5rem;
 }
 
-.seccion2 {
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.seccion3 {
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.seccion4 {
+.seccion-general {
     background-color: #fff;
     color: #333;
     text-align: center;
