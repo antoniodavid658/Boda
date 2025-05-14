@@ -18,17 +18,41 @@
 </head>
 
 <body class="overflow-hidden">
+
+    <div id="welcome-screen" class="fixed inset-0 bg-white z-50 flex items-center justify-center flex-col text-center">
+        <h1 class="text-4xl font-title mb-6">SANDRA & NICO</h1>
+        <p class="text-lg font-body mb-6">10 de Septiembre de 2025</p>
+        <button id="enter-button"
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition">
+            Entrar
+        </button>
+    </div>
+
+    <audio id="background-music" autoplay loop>
+        <source src="./music/wedding-day-318423.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="toggle-music"
+        class="fixed top-4 right-4 z-50 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
+        aria-label="Toggle Music">
+        ⏸️
+    </button>
+
     <div class="h-screen w-full overflow-y-scroll scroll-smooth snap-y snap-mandatory md:snap-none touch-pan-y">
         <section class="seccion1 snap-start h-screen overflow-hidden flex items-center justify-center">
-            <h1 class="font-title opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft" data-delay="200">SANDRA & NICO</h1>
-            <h2 class="font-title opacity-0 animate-on-scroll" data-animate="animate__fadeInRight" data-delay="200">¡NOS CASAMOS!</h2>
-            <p class="font-body opacity-0 animate-on-scroll" data-animate="animate__fadeInUp" data-delay="1200">20 DE SEPTIEMBRE DE 2025</p>
+            <h1 class="font-title opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft" data-delay="200">
+                SANDRA & NICO</h1>
+            <h2 class="font-title opacity-0 animate-on-scroll" data-animate="animate__fadeInRight" data-delay="200">¡NOS
+                CASAMOS!</h2>
+            <p class="font-body opacity-0 animate-on-scroll" data-animate="animate__fadeInUp" data-delay="1200">20 DE
+                SEPTIEMBRE DE 2025</p>
         </section>
 
         <section class="seccion-general snap-start snap-always min-h-screen overflow-y-auto py-8 px-4">
             <h2 class="text-3xl font-title mb-6 mt-4 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">¡YA
                 QUEDA MENOS!</h2>
-            <div id="countdown" class="opacity-0 animate-on-scroll" data-animate="animate__fadeInDown" data-delay="1000">
+            <div id="countdown" class="opacity-0 animate-on-scroll" data-animate="animate__fadeInDown"
+                data-delay="1000">
                 <div><span id="days">00</span><small>Días</small></div>
                 <div><span id="hours">00</span><small>Horas</small></div>
                 <div><span id="minutes">00</span><small>Minutos</small></div>
@@ -65,8 +89,10 @@
         <section
             class="seccion-general snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-3xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">COMPARTE TUS FOTOS CON NOSOTROS</h2>
-                <p class="font-body text-lg mb-8 opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft">Escanea el QR o haz clic en el botón para subir las fotos de la boda.<br> ¡Nos
+                <h2 class="text-3xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
+                    COMPARTE TUS FOTOS CON NOSOTROS</h2>
+                <p class="font-body text-lg mb-8 opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft">Escanea
+                    el QR o haz clic en el botón para subir las fotos de la boda.<br> ¡Nos
                     encantará
                     verlas!</p>
 
@@ -76,7 +102,8 @@
 
                 <a href="https://docs.google.com/forms/d/1DsPrmGRMTvQHrFi8iOFjVJY791PNfFvjWa647sc64jA/viewform"
                     target="_blank"
-                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition opacity-0 animate-on-scroll" data-animate="animate__fadeInUp">
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition opacity-0 animate-on-scroll"
+                    data-animate="animate__fadeInUp">
                     SUBIR FOTOS
                 </a>
             </div>
@@ -85,18 +112,22 @@
         <section
             class="seccion-general snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-3xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">CONFIRMACIÓN DE ASISTENCIA</h2>
-                <p class="font-body text-lg mb-8 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">Esperamos que seas parte de esta gran celebración.<br> ¡Confírmanos tu
+                <h2 class="text-3xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
+                    CONFIRMACIÓN DE ASISTENCIA</h2>
+                <p class="font-body text-lg mb-8 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
+                    Esperamos que seas parte de esta gran celebración.<br> ¡Confírmanos tu
                     asistencia!</p>
 
                 <a href="https://docs.google.com/forms/d/17hKMIZYNAz1YaOYQxy3Nqy4P8BNt7EvNnGxM4h8SMJ8/viewform"
                     target="_blank"
-                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition opacity-0 animate-on-scroll" data-animate="animate__fadeInUp">
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition opacity-0 animate-on-scroll"
+                    data-animate="animate__fadeInUp">
                     CONFIRMAR ASISTENCIA
                 </a>
             </div>
         </section>
     </div>
+
 
     <script src="./js/app.js"></script>
 </body>

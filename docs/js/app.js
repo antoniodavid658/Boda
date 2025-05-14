@@ -55,6 +55,34 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
-    observer.observe(el);
+// document.querySelectorAll('.animate-on-scroll').forEach(el => {
+//     observer.observe(el);
+// });
+
+//Bloque de música
+const welcomeScreen = document.getElementById('welcome-screen');
+const enterButton = document.getElementById('enter-button');
+const audio = document.getElementById('background-music');
+const toggleBtn = document.getElementById('toggle-music');
+
+enterButton.addEventListener('click', () => {
+    welcomeScreen.style.display = 'none';
+    audio.volume = 0.6;
+    audio.play();
+    toggleBtn.classList.remove('hidden');
+
+    //Forzar que el observer revise todos los elementos visibles
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+    })
+});
+
+toggleBtn.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        toggleBtn.textContent = '⏸️';
+    } else {
+        audio.pause();
+        toggleBtn.textContent = '▶️';
+    }
 });
