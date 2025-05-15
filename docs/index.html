@@ -2,44 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Boda Sandra y Nico</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> <!--Librería QR-->
     <!-- Fuentes elegantes para boda -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora&family=Great+Vibes&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <!--Animaciones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
-<body>
+<body class="overflow-hidden bg-[#f8f1e4]">
 
     <div id="welcome-screen"
         class="invitation-envelope fixed inset-0 bg-[#f8f1e4] z-50 flex items-center justify-center">
         <div class="envelope relative w-80 h-52">
             <div
-                class="flap absolute top-0 left-0 w-full h-1/2 bg-white border-x-2 border-t-2 border-[#d4b083] rounded-t-[12px] z-20 transition-transform duration-700 origin-top">
+                class="flap absolute top-0 left-0 w-full h-1/2 bg-[#f0e6d2] border-2 border-[#d4b083] rounded-b-[12px] shadow-md z-20 transition-transform duration-700 origin-top">
             </div>
             <div
                 class="front absolute bottom-0 left-0 w-full h-full bg-white border-2 border-[#d4b083] rounded-[12px] z-10">
             </div>
             <button id="enter-button"
-                class="seal absolute top-[76px] left-1/2 transform -translate-x-1/2 bg-[#d4b083] text-white text-2xl w-[60px] h-[60px] rounded-full shadow-md hover:scale-105 transition duration-200 z-30">💌</button>
+                class="seal absolute top-[76px] left-1/2 transform -translate-x-1/2 bg-[#d4b083] text-white w-[60px] h-[60px] rounded-full shadow-md hover:bg-[#9e7b56] hover:scale-105 transition duration-200 z-30 flex items-center justify-center"
+                aria-label="Entrar">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.65 11.54l-1.25 1.31z" />
+                </svg>
+            </button>
         </div>
     </div>
 
-
     <audio id="background-music" autoplay loop>
-        <source src="./music/wedding-day-318423.mp3" type="audio/mpeg">
+        <source src="./music/wedding-day-318423.mp3" type="audio/mpeg" />
     </audio>
 
     <button id="toggle-music"
-        class="fixed top-4 right-4 z-50 bg-white p-3 rounded-full shadow-md hover:bg-gray-100 transition"
+        class="fixed top-4 right-4 z-50 bg-[#faf7f2] p-3 rounded-full shadow-md hover:bg-[#f0e6d2] transition"
         aria-label="Toggle Music">
         <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
@@ -54,7 +59,8 @@
     </button>
 
     <div class="h-screen w-full overflow-y-scroll scroll-smooth snap-y snap-mandatory md:snap-none touch-pan-y">
-        <section class="seccion1 snap-start h-screen overflow-hidden flex items-center justify-center">
+        <section
+            class="seccion1 bg-[#faf7f2] text-[#4b3a26] snap-start h-screen overflow-hidden flex flex-col items-center justify-center space-y-6">
             <h1 class="font-title opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft" data-delay="200">
                 SANDRA & NICO</h1>
             <h2 class="font-title opacity-0 animate-on-scroll" data-animate="animate__fadeInRight" data-delay="200">¡NOS
@@ -63,7 +69,8 @@
                 SEPTIEMBRE DE 2025</p>
         </section>
 
-        <section class="seccion-general snap-start snap-always min-h-screen overflow-y-auto py-8 px-4">
+        <section
+            class="seccion-general cuenta_atras bg-[#f0e6d2] text-[#4b3a26] snap-start snap-always min-h-screen overflow-y-auto py-8 px-4">
             <h2 class="text-3xl font-title mb-6 mt-4 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">¡YA
                 QUEDA MENOS!</h2>
             <div id="countdown" class="opacity-0 animate-on-scroll" data-animate="animate__fadeInDown"
@@ -75,26 +82,26 @@
             </div>
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 <!-- Ceremonia -->
-                <div class="bg-white shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
-                    data-animate="animate__fadeInLeft" data-delay="0"">
-                    <h2 class=" text-2xl font-title">CEREMONIA</h2>
+                <div class="bg-[#faf7f2] border border-[#d4b083] text-[#4b3a26] shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
+                    data-animate="animate__fadeInLeft" data-delay="0">
+                    <h2 class="text-2xl font-title">CEREMONIA</h2>
                     <p class="text-lg font-body">Iglesia de Santa María</p>
-                    <p class="text-sm text-gray-600">12:00 PM - Plaça de Sta. Maria, 1, 03202 Elx, Alicante</p>
+                    <p class="text-sm text-[#9e7b56]">12:00 PM - Plaça de Sta. Maria, 1, 03202 Elx, Alicante</p>
                     <a href="https://maps.app.goo.gl/eesa5GQjdPBb63fP9" target="_blank"
-                        class="fonty-body inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+                        class="font-body inline-block mt-3 px-4 py-2 bg-[#d4b083] hover:bg-[#9e7b56] text-white rounded-xl transition">
                         Ver en Google Maps
                     </a>
                 </div>
 
                 <!-- Fiesta -->
-                <div class="bg-white shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
+                <div class="bg-[#faf7f2] border border-[#d4b083] text-[#4b3a26] shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
                     data-animate="animate__fadeInRight" data-delay="200">
                     <h2 class="text-2xl font-title">CELEBRACIÓN</h2>
                     <p class="text-lg font-body">Restaurante Carlos</p>
-                    <p class="text-sm text-gray-600">15:00 PM - Carretera La Marina, Kilómetro 3, 03294 Elche, Alicante
+                    <p class="text-sm text-[#9e7b56]">15:00 PM - Carretera La Marina, Kilómetro 3, 03294 Elche, Alicante
                     </p>
                     <a href="https://maps.app.goo.gl/oqyKwLA1VTBBVhXF6" target="_blank"
-                        class="font-body inline-block mt-3 px-4 py-2 bg-green-600 text-white rounded-xl hover:bg-green-700 transition">
+                        class="font-body inline-block mt-3 px-4 py-2 bg-[#d4b083] hover:bg-[#9e7b56] text-white rounded-xl transition">
                         Ver en Google Maps
                     </a>
                 </div>
@@ -102,12 +109,12 @@
         </section>
 
         <section
-            class="seccion-general snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
+            class="seccion-general fotos snap-start h-screen overflow-hidden flex items-center justify-center bg-[#faf7f2] py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
                 <h2 class="text-3xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
                     COMPARTE TUS FOTOS CON NOSOTROS</h2>
                 <p class="font-body text-lg mb-8 opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft">Escanea
-                    el QR o haz clic en el botón para subir las fotos de la boda.<br> ¡Nos
+                    el QR o haz clic en el botón para subir las fotos de la boda.<br /> ¡Nos
                     encantará
                     verlas!</p>
 
@@ -117,7 +124,7 @@
 
                 <a href="https://docs.google.com/forms/d/1DsPrmGRMTvQHrFi8iOFjVJY791PNfFvjWa647sc64jA/viewform"
                     target="_blank"
-                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition opacity-0 animate-on-scroll"
+                    class="inline-block bg-[#d4b083] text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-[#9e7b56] transition opacity-0 animate-on-scroll"
                     data-animate="animate__fadeInUp">
                     SUBIR FOTOS
                 </a>
@@ -125,24 +132,23 @@
         </section>
 
         <section
-            class="seccion-general snap-start h-screen overflow-hidden flex items-center justify-center bg-gray-100 py-16 px-4">
+            class="seccion-general asistencia snap-start h-screen overflow-hidden flex items-center justify-center bg-[#f0e6d2] py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
                 <h2 class="text-3xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
                     CONFIRMACIÓN DE ASISTENCIA</h2>
                 <p class="font-body text-lg mb-8 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
-                    Esperamos que seas parte de esta gran celebración.<br> ¡Confírmanos tu
+                    Esperamos que seas parte de esta gran celebración.<br /> ¡Confírmanos tu
                     asistencia!</p>
 
                 <a href="https://docs.google.com/forms/d/17hKMIZYNAz1YaOYQxy3Nqy4P8BNt7EvNnGxM4h8SMJ8/viewform"
                     target="_blank"
-                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition opacity-0 animate-on-scroll"
+                    class="inline-block bg-[#d4b083] text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-[#9e7b56] transition opacity-0 animate-on-scroll"
                     data-animate="animate__fadeInUp">
                     CONFIRMAR ASISTENCIA
                 </a>
             </div>
         </section>
     </div>
-
 
     <script src="./js/app.js"></script>
 </body>

@@ -74,7 +74,7 @@ const playIcon = document.getElementById("play-icon");
 
 enterButton.addEventListener("click", () => {
     const flap = document.querySelector(".flap");
-    flap.style.transform = "rotateX(-180deg)";
+    flap.style.transform = "rotateX(180deg)";
 
     setTimeout(() => {
         welcomeScreen.classList.add("hidden");
