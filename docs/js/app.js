@@ -38,55 +38,64 @@ new QRCode(document.getElementById("qrcode"), {
 //Bloque QR
 
 //Bloque de animaciones
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const el = entry.target;
-            const animation = el.dataset.animate || 'animate__fadeInUp'; // Valor por defecto
-            const delay = el.dataset.delay || 0;
+function startAnimations() {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const animation = el.dataset.animate || "animate__fadeInUp";
+                    const delay = el.dataset.delay || 0;
 
-            setTimeout(() => {
-                el.classList.remove('opacity-0');
-                el.classList.add('animate__animated', animation);
-            }, delay);
+                    setTimeout(() => {
+                        el.classList.remove("opacity-0");
+                        el.classList.add("animate__animated", animation);
+                    }, delay);
 
-            observer.unobserve(el); // Solo una vez
-        }
-    });
-}, { threshold: 0.1 });
+                    observer.unobserve(el);
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
 
-// document.querySelectorAll('.animate-on-scroll').forEach(el => {
-//     observer.observe(el);
-// });
-
-//Bloque de música
-const welcomeScreen = document.getElementById('welcome-screen');
-const enterButton = document.getElementById('enter-button');
-const audio = document.getElementById('background-music');
-const toggleBtn = document.getElementById('toggle-music');
-const pauseIcon = document.getElementById('pause-icon');
-const playIcon = document.getElementById('play-icon');
-
-enterButton.addEventListener('click', () => {
-    welcomeScreen.style.display = 'none';
-    audio.volume = 0.6;
-    audio.play();
-    toggleBtn.classList.remove('hidden');
-
-    //Forzar que el observer revise todos los elementos visibles
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
         observer.observe(el);
-    })
+    });
+}
+
+// BLOQUE MÚSICA Y SOBRE
+const welcomeScreen = document.getElementById("welcome-screen");
+const enterButton = document.getElementById("enter-button");
+const audio = document.getElementById("background-music");
+const toggleBtn = document.getElementById("toggle-music");
+const pauseIcon = document.getElementById("pause-icon");
+const playIcon = document.getElementById("play-icon");
+
+enterButton.addEventListener("click", () => {
+    const flap = document.querySelector(".flap");
+    flap.style.transform = "rotateX(-180deg)";
+
+    setTimeout(() => {
+        welcomeScreen.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden"); // Habilita scroll
+        audio.volume = 0.6;
+        audio.play().catch((e) => console.log("Audio bloqueado:", e));
+        toggleBtn.classList.remove("hidden");
+
+        //Iniciar animaciones una vez abierto el sobre
+        startAnimations();
+    }, 800);
 });
 
-toggleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
-        pauseIcon.classList.remove('hidden');
-        playIcon.classList.add('hidden');
+        pauseIcon.classList.remove("hidden");
+        playIcon.classList.add("hidden");
     } else {
         audio.pause();
-        pauseIcon.classList.add('hidden');
-        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add("hidden");
+        playIcon.classList.remove("hidden");
     }
 });

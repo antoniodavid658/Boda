@@ -17,16 +17,22 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
-<body class="overflow-hidden">
+<body>
 
-    <div id="welcome-screen" class="fixed inset-0 bg-white z-50 flex items-center justify-center flex-col text-center">
-        <h1 class="text-4xl font-title mb-6">SANDRA & NICO</h1>
-        <p class="text-lg font-body mb-6">10 de Septiembre de 2025</p>
-        <button id="enter-button"
-            class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-blue-700 transition">
-            Entrar
-        </button>
+    <div id="welcome-screen"
+        class="invitation-envelope fixed inset-0 bg-[#f8f1e4] z-50 flex items-center justify-center">
+        <div class="envelope relative w-80 h-52">
+            <div
+                class="flap absolute top-0 left-0 w-full h-1/2 bg-white border-x-2 border-t-2 border-[#d4b083] rounded-t-[12px] z-20 transition-transform duration-700 origin-top">
+            </div>
+            <div
+                class="front absolute bottom-0 left-0 w-full h-full bg-white border-2 border-[#d4b083] rounded-[12px] z-10">
+            </div>
+            <button id="enter-button"
+                class="seal absolute top-[76px] left-1/2 transform -translate-x-1/2 bg-[#d4b083] text-white text-2xl w-[60px] h-[60px] rounded-full shadow-md hover:scale-105 transition duration-200 z-30">💌</button>
+        </div>
     </div>
+
 
     <audio id="background-music" autoplay loop>
         <source src="./music/wedding-day-318423.mp3" type="audio/mpeg">
