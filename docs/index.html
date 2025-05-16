@@ -13,7 +13,8 @@
         rel="stylesheet" />
     <!--Animaciones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+    <!--Font Awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css" />
 </head>
 
@@ -46,16 +47,8 @@
     <button id="toggle-music"
         class="fixed top-4 right-4 z-50 bg-[#faf7f2] p-3 rounded-full shadow-md hover:bg-[#f0e6d2] transition"
         aria-label="Toggle Music">
-        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10 9v6m4-6v6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
-        </svg>
-        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M14.752 11.168l-5.197-3.027A1 1 0 008 9v6a1 1 0 001.555.832l5.197-3.027a1 1 0 000-1.664z" />
-        </svg>
+        <i id="pause-icon" class="fa-solid fa-volume-xmark hidden"></i>
+        <i id="play-icon" class="fa-solid fa-music"></i>
     </button>
 
     <div class="h-screen w-full overflow-y-scroll scroll-smooth snap-y snap-mandatory md:snap-none touch-pan-y">
