@@ -101,38 +101,48 @@
             </div>
         </section>
 
-        <section class="seccion-general galeria snap-start min-h-screen bg-[#faf7f2] py-16 px-4">
-            <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-3xl font-title text-[#4b3a26] mb-10 opacity-0 animate-on-scroll"
-                    data-animate="animate__fadeInDown">
-                    NUESTRA HISTORIA EN IMÁGENES
-                </h2>
+        <section
+            class="seccion-general galeria snap-start min-h-screen bg-[#faf7f2] py-16 px-4 flex flex-col items-center justify-center">
+            <h2 class="text-3xl font-title text-[#4b3a26] mb-10 opacity-0 animate-on-scroll"
+                data-animate="animate__fadeInDown">
+                NUESTRA HISTORIA EN IMÁGENES
+            </h2>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <!-- Ejemplo de imagen -->
-                    <div class="overflow-hidden rounded-xl shadow-md opacity-0 animate-on-scroll"
-                        data-animate="animate__zoomIn">
-                        <img src="./images/novios1.jpg" alt="Foto de los novios 1"
-                            class="w-full h-72 object-cover hover:scale-105 transition duration-300">
+            <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-md" id="slider-container">
+                <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+                    <div class="flex transition-transform duration-700 ease-in-out" style="transform: translateX(0%)">
+                        <img src="./images/novios1.jpg" alt="Foto 1"
+                            class="w-full h-96 object-cover flex-shrink-0 cursor-pointer" />
+                        <img src="./images/novios2.jpg" alt="Foto 2"
+                            class="w-full h-96 object-cover flex-shrink-0 cursor-pointer" />
+                        <img src="./images/novios3.jpg" alt="Foto 3"
+                            class="w-full h-96 object-cover flex-shrink-0 cursor-pointer" />
+                        <img src="./images/novios4.jpg" alt="Foto 4"
+                            class="w-full h-96 object-cover flex-shrink-0 cursor-pointer" />
+                        <!-- Agrega más imágenes si deseas -->
                     </div>
-                    <div class="overflow-hidden rounded-xl shadow-md opacity-0 animate-on-scroll"
-                        data-animate="animate__zoomIn" data-delay="100">
-                        <img src="./images/novios2.jpg" alt="Foto de los novios 2"
-                            class="w-full h-72 object-cover hover:scale-105 transition duration-300">
-                    </div>
-                    <div class="overflow-hidden rounded-xl shadow-md opacity-0 animate-on-scroll"
-                        data-animate="animate__zoomIn" data-delay="200">
-                        <img src="./images/novios3.jpg" alt="Foto de los novios 3"
-                            class="w-full h-72 object-cover hover:scale-105 transition duration-300">
-                    </div>
-                    <div class="overflow-hidden rounded-xl shadow-md opacity-0 animate-on-scroll"
-                        data-animate="animate__zoomIn" data-delay="200">
-                        <img src="./images/novios4.jpg" alt="Foto de los novios 4"
-                            class="w-full h-72 object-cover hover:scale-105 transition duration-300">
-                    </div>
-                    <!-- Añade más imágenes siguiendo este mismo patrón -->
                 </div>
+
+                <!-- Controles -->
+                <button id="prev"
+                    class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#d4b083] hover:bg-[#9e7b56] text-white px-4 py-2 rounded-r-lg shadow-md transition z-10">
+                    &#10094;
+                </button>
+                <button id="next"
+                    class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#d4b083] hover:bg-[#9e7b56] text-white px-4 py-2 rounded-l-lg shadow-md transition z-10">
+                    &#10095;
+                </button>
             </div>
+
+            <!-- Lightbox -->
+            <div id="lightbox"
+                class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden transition duration-300">
+                <button id="lightbox-prev" class="absolute left-4 text-white text-3xl z-50">&#10094;</button>
+                <img id="lightbox-img"
+                    class="max-w-full max-h-[90vh] rounded-lg transition-transform duration-300 scale-95 opacity-0" />
+                <button id="lightbox-next" class="absolute right-4 text-white text-3xl z-50">&#10095;</button>
+            </div>
+
         </section>
 
         <section
