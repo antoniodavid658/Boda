@@ -80,10 +80,20 @@ enterButton.addEventListener("click", () => {
         welcomeScreen.classList.add("hidden");
         document.body.classList.remove("overflow-hidden"); // Habilita scroll
         audio.volume = 0.6;
-        audio.play().catch((e) => console.log("Audio bloqueado:", e));
+
+        audio.play().then(() => {
+            pauseIcon.classList.remove("hidden");
+            playIcon.classList.add("hidden");
+        }).catch((e) => {
+            console.log("Audio bloqueado:", e);
+            // Si el audio no se reproduce, muestra el icono de play
+            pauseIcon.classList.add("hidden");
+            playIcon.classList.remove("hidden");
+        });
+
         toggleBtn.classList.remove("hidden");
 
-        //Iniciar animaciones una vez abierto el sobre
+        // Iniciar animaciones una vez abierto el sobre
         startAnimations();
     }, 800);
 });
