@@ -156,6 +156,9 @@ const lightboxImg = document.getElementById('lightbox-img');
 const lightboxPrev = document.getElementById('lightbox-prev');
 const lightboxNext = document.getElementById('lightbox-next');
 
+document.getElementById("lightbox-close").addEventListener("click", closeLightbox) ;
+
+
 let currentIndex = 0;
 
 function openLightbox(index) {
