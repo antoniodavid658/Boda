@@ -1,17 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body,
-html {
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth;
-}
-
 .invitation-envelope {
     background: #f8f1e4;
     font-family: 'Playfair Display', serif;
@@ -71,7 +57,7 @@ html {
     transform: translateX(-50%) scale(1.05);
 }
 
-
+/* Tipografías personalizadas */
 .font-title {
     font-family: 'Playfair Display', serif;
 }
@@ -80,48 +66,21 @@ html {
     font-family: 'Lora', serif;
 }
 
+/* Fondo de sección principal escritorio y móvil */
 .seccion1 {
-    height: 100vh;
     background-image: url('./../images/flores-escritorio.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: rgb(10, 10, 10);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
 }
 
-.seccion1 h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+@media (max-width: 768px) {
+    .seccion1 {
+        background-image: url('./../images/flores-moviles.png');
+    }
 }
 
-.seccion1 h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.seccion1 p {
-    font-size: 1.5rem;
-}
-
-.seccion-general {
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-
+/* Cuenta atrás */
 #countdown {
     display: flex;
     justify-content: center;
@@ -143,10 +102,4 @@ html {
 #countdown small {
     font-size: 1rem;
     color: #666;
-}
-
-@media (max-width: 768px) {
-    .seccion1 {
-        background-image: url('./../images/flores-moviles.png');
-    }
 }

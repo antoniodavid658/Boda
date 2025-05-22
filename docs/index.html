@@ -53,37 +53,63 @@
 
     <div class="h-screen w-full overflow-y-scroll scroll-smooth snap-y snap-mandatory md:snap-none touch-pan-y">
         <section
-            class="seccion1 bg-[#faf7f2] text-[#4b3a26] snap-start h-screen overflow-hidden flex flex-col items-center justify-center space-y-6">
-            <h1 class="font-title opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft" data-delay="200">
-                SANDRA & NICO
+            class="seccion1 bg-[#f0e6d2] text-[#4b3a26] snap-start h-screen overflow-hidden flex flex-col items-center justify-center space-y-6">
+            <h1 class="font-title text-4xl opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft"
+                data-delay="200">
+                SANDRA Y NICOLÁS
             </h1>
-            <h2 class="font-title opacity-0 animate-on-scroll" data-animate="animate__fadeInRight" data-delay="200">
+            <h2 class="font-title text-4xl opacity-0 animate-on-scroll" data-animate="animate__fadeInRight"
+                data-delay="200">
                 ¡NOS CASAMOS!
             </h2>
-            <p class="font-body opacity-0 animate-on-scroll" data-animate="animate__fadeInUp" data-delay="1200">
+            <p class="font-body text-4xl opacity-0 animate-on-scroll text-center" data-animate="animate__fadeInUp"
+                data-delay="1200">
                 20 DE SEPTIEMBRE DE 2025
             </p>
         </section>
 
-        <section
-            class="seccion-general cuenta_atras bg-[#f0e6d2] text-[#4b3a26] snap-start snap-always min-h-[140vh] md:min-h-[120vh] lg:min-h-screen py-24 px-4 scroll-mt-16">
-            <h2 class="text-3xl font-title mb-6 mt-4 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
-                ¡YA QUEDA MENOS!
-            </h2>
-            <div id="countdown" class="opacity-0 animate-on-scroll" data-animate="animate__fadeInDown"
-                data-delay="1000">
-                <div><span id="days">00</span><small>Días</small></div>
-                <div><span id="hours">00</span><small>Horas</small></div>
-                <div><span id="minutes">00</span><small>Minutos</small></div>
-                <div><span id="seconds">00</span><small>Segundos</small></div>
+        <!-- Sección Cuenta Atrás -->
+        <section class="seccion-general cuenta_atras min-h-screen bg-[#faf7f2] text-[#4b3a26] snap-start snap-always py-16 px-4 scroll-mt-16 flex items-center justify-center">
+            <div class="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+                <h2 class="text-4xl font-title mb-6 mt-4 opacity-0 animate-on-scroll"
+                    data-animate="animate__fadeInRight">
+                    ¡YA QUEDA MENOS!
+                </h2>
+                <div id="countdown" class="opacity-0 animate-on-scroll flex justify-center gap-6 text-xl font-body"
+                    data-animate="animate__fadeInDown" data-delay="1000">
+                    <div><span id="days">00</span><small class="block text-sm">Días</small></div>
+                    <div><span id="hours">00</span><small class="block text-sm">Horas</small></div>
+                    <div><span id="minutes">00</span><small class="block text-sm">Minutos</small></div>
+                    <div><span id="seconds">00</span><small class="block text-sm">Segundos</small></div>
+                </div>
+
+                <p class="font-body text-2xl mt-6 max-w-xl mx-auto text-center text-[#4b3a26] opacity-0 animate-on-scroll" data-animate="animate__fadeInUp">
+                    El amor no tiene fecha en el calendario, pero el nuestro ya está marcado: 20 de septiembre de 2025. 💍
+                </p>
+
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Sandra+y+Nico&dates=20250920T154500Z/20250920T210000Z&details=No+faltes+a+este+día+tan+especial.&location=Iglesia+Santa+María,+Elche"
+                    target="_blank"
+                    class="mt-8 inline-block bg-[#d4b083] text-white px-6 py-3 rounded-lg text-lg font-body hover:bg-[#9e7b56] transition opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft">
+                    Guardar en mi calendario
+                </a>
             </div>
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        </section>
+
+        <!-- Sección Ceremonia y Celebración -->
+        <section
+            class="seccion-general ubicaciones bg-[#f0e6d2] text-[#4b3a26] snap-start snap-always min-h-screen py-24 px-4">
+            <h2 class="text-4xl font-title mb-10 opacity-0 animate-on-scroll text-center"
+                data-animate="animate__fadeInDown">
+                CEREMONIA Y CELEBRACIÓN
+            </h2>
+
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Ceremonia -->
-                <div class="bg-[#faf7f2] border border-[#d4b083] text-[#4b3a26] shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
+                <div class="bg-white text-center border border-[#d4b083] text-[#4b3a26] shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
                     data-animate="animate__fadeInLeft" data-delay="0">
                     <img src="./images/santamaria.jpg" alt="Iglesia Santa María"
                         class="w-full h-48 object-cover rounded-xl mb-4" />
-                    <h2 class="text-2xl font-title">CEREMONIA</h2>
+                    <h3 class="text-2xl font-title">CEREMONIA</h3>
                     <p class="text-lg font-body">Iglesia de Santa María</p>
                     <p class="text-sm text-[#9e7b56]">
                         17:45 h - Plaça de Sta. Maria, 1, 03202 Elx, Alicante
@@ -95,14 +121,13 @@
                 </div>
 
                 <!-- Fiesta -->
-                <div class="bg-[#faf7f2] border border-[#d4b083] text-[#4b3a26] shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
+                <div class="bg-white text-center border border-[#d4b083] text-[#4b3a26] shadow-md rounded-2xl p-6 opacity-0 animate-on-scroll"
                     data-animate="animate__fadeInRight" data-delay="200">
                     <img src="./images/finca.jpeg" alt="La finca" class="w-full h-48 object-cover rounded-xl mb-4" />
-                    <h2 class="text-2xl font-title">CELEBRACIÓN</h2>
+                    <h3 class="text-2xl font-title">CELEBRACIÓN</h3>
                     <p class="text-lg font-body">Finca la Llaguna</p>
                     <p class="text-sm text-[#9e7b56]">
-                        20:45 h - Carrer el Castellà Colorat, 17, 03339 Pol. Ind. Boch,
-                        Alicante
+                        20:45 h - Carrer el Castellà Colorat, 17, 03339 Pol. Ind. Boch, Alicante
                     </p>
                     <a href="https://maps.app.goo.gl/aF25PdUeBLfy7Y1j6" target="_blank"
                         class="font-body inline-block mt-3 px-4 py-2 bg-[#d4b083] hover:bg-[#9e7b56] text-white rounded-xl transition">
@@ -113,13 +138,13 @@
         </section>
 
         <section
-            class="seccion-general galeria snap-start min-h-screen bg-[#faf7f2] py-16 px-4 flex flex-col items-center justify-center">
-            <h2 class="text-3xl font-title text-[#4b3a26] mb-10 opacity-0 animate-on-scroll"
+            class="seccion-general galeria snap-start snap-always min-h-screen bg-[#faf7f2] py-16 px-4 flex flex-col items-center justify-center text-center">
+            <h2 class="text-4xl font-title text-[#4b3a26] mb-10 opacity-0 animate-on-scroll"
                 data-animate="animate__fadeInDown">
                 NUESTRA HISTORIA EN IMÁGENES
             </h2>
 
-            <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-md" id="slider-container">
+            <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-md opacity-0 animate-on-scroll" data-animate="animate__fadeInUp" id="slider-container">
                 <div id="slider" class="flex transition-transform duration-700 ease-in-out">
                     <div class="flex transition-transform duration-700 ease-in-out" style="transform: translateX(0%)">
                         <img src="./images/novios1.jpg" alt="Foto 1"
@@ -155,21 +180,21 @@
                     &times;
                 </button>
 
-                <button id="lightbox-prev" class="absolute left-4 text-white text-3xl z-50">
+                <button id="lightbox-prev" class="absolute left-4 text-white text-4xl z-50">
                     &#10094;
                 </button>
                 <img id="lightbox-img"
                     class="max-w-full max-h-[90vh] rounded-lg transition-transform duration-300 scale-95 opacity-0" />
-                <button id="lightbox-next" class="absolute right-4 text-white text-3xl z-50">
+                <button id="lightbox-next" class="absolute right-4 text-white text-4xl z-50">
                     &#10095;
                 </button>
             </div>
         </section>
 
         <section
-            class="seccion-general fotos snap-start h-screen overflow-hidden flex items-center justify-center bg-[#f0e6d2] py-16 px-4">
+            class="seccion-general fotos snap-start snap-always h-screen overflow-hidden flex items-center justify-center bg-[#f0e6d2] py-16 px-4">
             <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-3xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
+                <h2 class="text-4xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
                     COMPARTE TUS FOTOS CON NOSOTROS
                 </h2>
                 <p class="font-body text-lg mb-8 opacity-0 animate-on-scroll" data-animate="animate__fadeInLeft">
@@ -191,10 +216,9 @@
             </div>
         </section>
 
-        <section
-            class="seccion-general asistencia snap-start h-screen overflow-hidden flex items-center justify-center bg-[#faf7f2] py-16 px-4">
+        <section class="seccion-general min-h-screen asistencia snap-start snap-always bg-[#faf7f2] py-16 px-4 flex items-center justify-center">
             <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-3xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
+                <h2 class="text-4xl font-title mb-6 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
                     CONFIRMACIÓN DE ASISTENCIA
                 </h2>
                 <p class="font-body text-lg mb-8 opacity-0 animate-on-scroll" data-animate="animate__fadeInDown">
