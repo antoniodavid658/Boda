@@ -68,16 +68,9 @@
 
 /* Fondo de sección principal escritorio y móvil */
 .seccion1 {
-    background-image: url('./../images/flores-escritorio.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
-    .seccion1 {
-        background-image: url('./../images/flores-moviles.png');
-    }
 }
 
 /* Cuenta atrás */
