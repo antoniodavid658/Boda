@@ -156,7 +156,7 @@ const lightboxImg = document.getElementById('lightbox-img');
 const lightboxPrev = document.getElementById('lightbox-prev');
 const lightboxNext = document.getElementById('lightbox-next');
 
-document.getElementById("lightbox-close").addEventListener("click", closeLightbox) ;
+document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
 
 
 let currentIndex = 0;
@@ -231,5 +231,71 @@ lightbox.addEventListener('touchend', (e) => {
     }
 }, { passive: true });
 
+//Formulario asistencia
 
+const form = document.getElementById("form-confirmacion");
+const submittedKey = "confirmacion_boda";
+const previousData = JSON.parse(localStorage.getItem(submittedKey));
+
+function showMessage() {
+    const container = document.createElement("div");
+    container.className = "text-center mt-6";
+
+    const msg = document.createElement("p");
+    msg.className = "text-lg font-semibold text-green-700 mb-4";
+    msg.innerText = "Ya has confirmado tu asistencia. ¡Gracias!";
+
+    const btn = document.createElement("button");
+    btn.innerText = "Editar respuesta";
+    btn.className = "bg-[#d4b083] text-white px-4 py-2 rounded hover:bg-[#9e7b56] transition";
+    btn.onclick = () => {
+        localStorage.removeItem(submittedKey);
+        location.reload();
+    };
+
+    container.appendChild(msg);
+    container.appendChild(btn);
+    form.parentNode.insertBefore(container, form);
+    form.style.display = "none";
+}
+
+if (previousData) {
+    showMessage();
+}
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+        nombre: formData.get("nombre"),
+        asistencia: formData.get("asistencia"),
+        companion: formData.get("companion"),
+        alergia: formData.get("alergia"),
+        traslado: formData.get("traslado")
+    };
+
+    // Guarda en localStorage
+    localStorage.setItem(submittedKey, JSON.stringify(data));
+
+    // Envía los datos (ajusta tu URL de Apps Script)
+    await fetch("https://script.google.com/macros/s/AKfycbyqgXJR3Id8i5RdOhwjsBEyErbXXDdH_n14GpZPB1N1AXeuohOr4NLIS_0Dl67EoacstQ/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+
+    showMessage();
+});
+
+// Si quieres rellenar el formulario con datos guardados cuando se edita
+if (previousData && form.style.display !== "none") {
+    form.nombre.value = previousData.nombre || "";
+    form.asistencia.value = previousData.asistencia || "";
+    form.companion.value = previousData.companion || "";
+    form.alergia.value = previousData.alergia || "";
+    form.traslado.value = previousData.traslado || "";
+}
 

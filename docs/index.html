@@ -250,7 +250,33 @@
                     data-animate="animate__fadeInUp">
                     CONFIRMAR ASISTENCIA
                 </a> -->
-                <iframe class="marco" src="https://docs.google.com/forms/d/17hKMIZYNAz1YaOYQxy3Nqy4P8BNt7EvNnGxM4h8SMJ8/viewform"></iframe>
+                <!-- <iframe class="marco" src="https://docs.google.com/forms/d/17hKMIZYNAz1YaOYQxy3Nqy4P8BNt7EvNnGxM4h8SMJ8/viewform"></iframe> -->
+                <form id="form-confirmacion" class="space-y-4 max-w-md mx-auto">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required
+                        class="w-full p-3 border rounded-lg" />
+                    <select name="asistencia" required class="w-full p-3 border rounded-lg">
+                        <option value="">¿Asistirás?</option>
+                        <option value="Aceptado">Sí</option>
+                        <option value="Rechazada">No</option>
+                    </select>
+                    <input type="text" name="companion" id="companion" placeholder="Nombre y apellido del acompañante"
+                        class="w-full p-3 border rounded-lg" />
+
+                    <input type="text" name="alergia" id="alergia" placeholder="Alergias alimenticias"
+                        class="w-full p-3 border rounded-lg" />
+
+                    <select name="traslado" required class="w-full p-3 border rounded-lg">
+                        <option value="">¿Necesitas traslado?</option>
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                    <button type="submit"
+                        class="bg-[#d4b083] text-white px-6 py-3 rounded-lg hover:bg-[#9e7b56] transition">
+                        Confirmar asistencia
+                    </button>
+                </form>
+
+                <p id="mensaje" class="mt-4 text-green-600 hidden">¡Gracias por confirmar!</p>
             </div>
         </section>
     </div>
