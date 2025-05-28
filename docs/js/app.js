@@ -259,8 +259,16 @@ function showMessage() {
     form.style.display = "none";
 }
 
+// Si ya hay datos guardados, mostrar mensaje
 if (previousData) {
     showMessage();
+} else {
+    // Prefill si no está oculto
+    form.nombre.value = previousData?.nombre || "";
+    form.asistencia.value = previousData?.asistencia || "";
+    form.companion.value = previousData?.companion || "";
+    form.alergia.value = previousData?.alergia || "";
+    form.traslado.value = previousData?.traslado || "";
 }
 
 form.addEventListener("submit", async function (e) {
@@ -275,27 +283,26 @@ form.addEventListener("submit", async function (e) {
         traslado: formData.get("traslado")
     };
 
-    // Guarda en localStorage
-    localStorage.setItem(submittedKey, JSON.stringify(data));
+    try {
+        // Guarda en localStorage
+        localStorage.setItem(submittedKey, JSON.stringify(data));
 
-    // Envía los datos (ajusta tu URL de Apps Script)
-    await fetch("https://script.google.com/macros/s/AKfycbyqgXJR3Id8i5RdOhwjsBEyErbXXDdH_n14GpZPB1N1AXeuohOr4NLIS_0Dl67EoacstQ/exec", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    });
+        // Envía los datos al Google Apps Script
+        const response = await fetch("https://script.google.com/macros/s/AKfycbyqgXJR3Id8i5RdOhwjsBEyErbXXDdH_n14GpZPB1N1AXeuohOr4NLIS_0Dl67EoacstQ/exec", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
 
-    showMessage();
+        if (!response.ok) throw new Error("Error en la solicitud");
+
+        // Mostrar mensaje si todo salió bien
+        showMessage();
+    } catch (error) {
+        alert("Hubo un error al enviar el formulario. Intenta de nuevo.");
+        console.error(error);
+    }
 });
-
-// Si quieres rellenar el formulario con datos guardados cuando se edita
-if (previousData && form.style.display !== "none") {
-    form.nombre.value = previousData.nombre || "";
-    form.asistencia.value = previousData.asistencia || "";
-    form.companion.value = previousData.companion || "";
-    form.alergia.value = previousData.alergia || "";
-    form.traslado.value = previousData.traslado || "";
-}
 
