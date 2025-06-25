@@ -5,7 +5,7 @@ function updateCountdown() {
     const diff = weddingDate - now;
 
     if (diff <= 0) {
-        document.getElementById("countdown").innerHTML = "<p>¡Ya es el gran día!</p>";
+        document.getElementById("countdown").innerHTML = "<p>¡YA ES EL GRAN DÍA!</p>";
         return;
     }
 
