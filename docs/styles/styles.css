@@ -58,6 +58,18 @@
 }
 
 /* Tipografías personalizadas */
+.font-title-imperial {
+    font-family: "Imperial Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-title-meaCulpa {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .font-title {
     font-family: 'Playfair Display', serif;
 }
