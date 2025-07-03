@@ -231,78 +231,19 @@ lightbox.addEventListener('touchend', (e) => {
     }
 }, { passive: true });
 
-//Formulario asistencia
 
-const form = document.getElementById("form-confirmacion");
-const submittedKey = "confirmacion_boda";
-const previousData = JSON.parse(localStorage.getItem(submittedKey));
+document.getElementById('show-account').addEventListener('click', function () {
+    const accountDiv = document.getElementById('account-number');
+    const button = this;
 
-function showMessage() {
-    const container = document.createElement("div");
-    container.className = "text-center mt-6";
-
-    const msg = document.createElement("p");
-    msg.className = "text-lg font-semibold text-green-700 mb-4";
-    msg.innerText = "Ya has confirmado tu asistencia. ¡Gracias!";
-
-    const btn = document.createElement("button");
-    btn.innerText = "Editar respuesta";
-    btn.className = "bg-[#d4b083] text-white px-4 py-2 rounded hover:bg-[#9e7b56] transition";
-    btn.onclick = () => {
-        localStorage.removeItem(submittedKey);
-        location.reload();
-    };
-
-    container.appendChild(msg);
-    container.appendChild(btn);
-    form.parentNode.insertBefore(container, form);
-    form.style.display = "none";
-}
-
-// Si ya hay datos guardados, mostrar mensaje
-if (previousData) {
-    showMessage();
-} else {
-    // Prefill si no está oculto
-    form.nombre.value = previousData?.nombre || "";
-    form.asistencia.value = previousData?.asistencia || "";
-    form.companion.value = previousData?.companion || "";
-    form.alergia.value = previousData?.alergia || "";
-    form.traslado.value = previousData?.traslado || "";
-}
-
-form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const data = {
-        nombre: formData.get("nombre"),
-        asistencia: formData.get("asistencia"),
-        companion: formData.get("companion"),
-        alergia: formData.get("alergia"),
-        traslado: formData.get("traslado")
-    };
-
-    try {
-        // Guarda en localStorage
-        localStorage.setItem(submittedKey, JSON.stringify(data));
-
-        // Envía los datos al Google Apps Script
-        const response = await fetch("https://script.google.com/macros/s/AKfycbyqgXJR3Id8i5RdOhwjsBEyErbXXDdH_n14GpZPB1N1AXeuohOr4NLIS_0Dl67EoacstQ/exec", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-
-        if (!response.ok) throw new Error("Error en la solicitud");
-
-        // Mostrar mensaje si todo salió bien
-        showMessage();
-    } catch (error) {
-        alert("Hubo un error al enviar el formulario. Intenta de nuevo.");
-        console.error(error);
+    if (accountDiv.style.opacity === '1') {
+        accountDiv.style.opacity = '0';
+        button.textContent = 'Mostrar número de cuenta';
+    } else {
+        accountDiv.textContent = 'ES58 0081 0212 9300 0202 8505';
+        accountDiv.style.opacity = '1';
+        accountDiv.style.transition = 'opacity 0.5s ease';
+        button.textContent = 'Ocultar número de cuenta';
     }
 });
 
